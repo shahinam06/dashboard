@@ -1,1 +1,88 @@
-<p>dashboard works!</p>
+<div>
+    <div class="stats">
+        <div class="stats-count">
+            <div class="icon">
+                <img src="../../assets/project_icon.png" alt="">
+            </div>
+            <div class="count">
+                <p>Projects</p>
+                <p class="value">12</p>
+            </div>
+        </div>
+        <div class="stats-count">
+            <div class="icon">
+                <img src="../../assets/project_icon.png" alt="">
+            </div>
+            <div class="count">
+                <p>Leads</p>
+                <p class="value">12</p>
+            </div>
+        </div>
+        <div class="stats-count">
+            <div class="icon">
+                <img src="../../assets//leads_icon.png" alt="">
+            </div>
+            <div class="count">
+                <p>Teams</p>
+                <p class="value">12</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-md-5">
+                <div class="bg-white chart-padding">
+                    <div class="chart-container pie-chart">
+                        <canvas id="MyChart">{{ chart }}</canvas>
+                    </div>
+                    <div class="legend-container">
+
+                        <div class="legend-item">
+                            <p>{{ chartDataValues[3]}}</p>
+                            <div>
+                                <span class="legend-color" style="background-color: yellow;"></span>
+                                <span class="legend-label">Completed</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-7 mt">
+                <div class="bg-white">
+                    <ul class="list-group">
+                        <li class="list-group-item text-start users-heading">Users <span (click)="toggleSort()"
+                                style="cursor: pointer;">{{ sortIcon }}</span></li>
+                        <li class="list-group-item text-start user-names" *ngFor="let item of sortedItems">
+                            <div class="users">
+                                <div>
+                                    <app-user-avatar [name]="item.name"></app-user-avatar>
+                                </div>
+                                <div class="user-details">
+                                    <p>{{item .name}}</p>
+                                    <p>{{item .email}}</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="chart-container bg-white">
+                    <canvas id="LineChart">{{ lineChart1 }}</canvas>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="chart-container bg-white">
+                    <canvas id="MyLineChart">{{ lineChart }}</canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

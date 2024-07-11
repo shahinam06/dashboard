@@ -1,0 +1,167 @@
+.stats {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.stats-count {
+    width: 175px;
+    height: 80px;
+    background: #ffffff;
+    border-radius: 20px;
+    display: flex;
+    gap: 14px;
+    cursor: pointer;
+    padding: 15px;
+}
+
+.icon {
+    img {
+        width: 50px;
+    }
+}
+
+.count>p:nth-child(1) {
+    color: #A3AED0;
+    font-size: 12px;
+}
+
+.count>p:nth-child(2) {
+    color: #1B2559;
+    ;
+    font-size: 11px;
+}
+
+.value {
+    font-weight: bold;
+    font-size: 15px !important;
+    color: #000000 !important;
+    margin-top: -0.5em;
+}
+
+.task-section {
+    display: flex;
+}
+
+.tasks {
+    background: #ffffff;
+    height: 2em;
+}
+
+.charts-section {
+    display: flex;
+}
+
+.chart-padding {
+    padding: 0 0 1em 1em;
+}
+
+.legend-container {
+    display: flex;
+
+}
+
+.legend-item {
+
+    align-items: center;
+
+    p {
+        // margin-inline-start: 1em;
+        font-size: 11px;
+        font-weight: bold;
+    }
+}
+
+.legend-color {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    /* Creates circular shape */
+    margin-right: 10px;
+}
+
+.legend-label {
+    font-size: 11px;
+}
+
+
+.main-section {
+    display: flex;
+    margin-top: 2em;
+    gap: 2em;
+}
+
+.box {
+    // width: 212px;
+    height: auto;
+    background: #ffffff;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+
+.chart-container {
+    margin-top: 2em;
+}
+
+.heading {
+    display: flex;
+}
+
+.heading {
+    button {
+        cursor: pointer;
+        padding: 1em;
+    }
+}
+
+
+
+
+
+.mt {
+    margin-top: 2em;
+}
+
+.list-group {
+    overflow-y: scroll;
+    height: 22.3em;
+    ;
+    scrollbar-width: thin;
+    scrollbar-color: rgb(171, 142, 171) rgb(171, 142, 171);
+}
+
+.user-names {
+    cursor: pointer;
+    padding-bottom: 0;
+
+    .users {
+        display: flex;
+        gap: 1em;
+    }
+}
+
+.user-details>p:nth-child(1) {
+    color: #1B2128;
+    font-size: 12px;
+    font-weight: 500
+}
+
+.user-details>p:nth-child(2) {
+    color: #959595;
+    font-size: 11px;
+    margin-top: -1em;
+}
+
+.users-heading {
+    color: #534D59;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.col-md-5 > div, .col-md-7 > div, .col-md-6 > div {
+    background-color: white;
+    border-radius: 24px; /* Same border-radius for all columns */
+  }

@@ -1,0 +1,64 @@
+<div class="sidebar" [ngClass]="{'open': isSidebarOpen}">
+  <button class="close-btn" (click)="toggleSidebar()">✖</button>
+  <div class="user-name">
+    <p>Hi, Ashik</p>
+    <p>Let's finish your task today!</p>
+  </div>
+
+  <img src="../../assets/Avatars.png" alt="">
+  <ul>
+    <li>
+      <a href="#">Today</a>
+      <ul class="list-group">
+        <li class="list-group-item d-flex align-items-center bg-transparent settings-list">
+          <div>
+            <img src="../../assets/reminders.svg" alt="">
+          </div>
+          <p>Reminders</p>
+          <span class="badge bg-danger rounded-pill">5</span>
+        </li>
+        <li class="list-group-item d-flex align-items-center bg-transparent settings-list">
+          <div>
+            <img src="../../assets/follow_ups.svg" alt="">
+          </div>
+          <p>Followups</p>
+          <span class="badge bg-danger rounded-pill circle1">3</span>
+        </li>
+        <li class="list-group-item d-flex align-items-center bg-transparent settings-list">
+          <div>
+            <img src="../../assets/meetings.svg" alt="">
+          </div>
+          <p>Meetings</p>
+          <span class="badge bg-danger rounded-pill circle2">4</span>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="#">Profile Settings</a>
+      <ul class="list-group">
+        <li class="list-group-item d-flex align-items-center bg-transparent settings-list">
+          <div>
+            <img src="../../assets/change_pw.svg" alt="">
+          </div>
+          <p>Change Password</p>
+        </li>
+        <li class="list-group-item d-flex align-items-center bg-transparent settings-list">
+          <div>
+            <img src="../../assets/email.svg" alt="">
+          </div>
+          <p>Change Email</p>
+        </li>
+        <li class="list-group-item d-flex align-items-center bg-transparent settings-list">
+          <div>
+            <img src="../../assets/other.svg" alt="">
+          </div>
+          <p>Other Settings</p>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+<button class="hamburger" (click)="toggleSidebar()" *ngIf="!isSidebarOpen">
+  ☰
+</button>

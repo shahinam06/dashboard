@@ -1,0 +1,174 @@
+.sidebar {
+  color: #fff;
+  width: 20%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  transition: transform 0.3s ease;
+  padding: 1em;
+
+}
+
+
+
+.sidebar>p:nth-child(1) {
+  color: #000000;
+  font-size: 12px;
+}
+
+.sidebar>p:nth-child(2) {
+  color: rgb(125, 125, 188);
+  font-size: 11px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul ul {
+  display: block;
+  /* Ensure all sub-lists are visible */
+}
+
+.sidebar ul li {
+  padding: 10px;
+  padding-bottom: 0;
+}
+
+.sidebar ul li:hover>ul {
+  display: block;
+}
+
+.sidebar .close-btn {
+  display: none; /* Hidden by default */
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .sidebar .close-btn {
+    display: block; /* Show close button below 768px */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: 100%;
+    transform: translateX(100%);
+    background-color: #333;
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  .hamburger {
+    display: block;
+    position: fixed;
+    right: 7px;
+    z-index: 9999;
+    font-size: 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+
+  
+  }
+}
+@media screen and (min-width: 768px) {
+  .hamburger {
+  display: none;
+  }
+}
+
+
+
+.user-name>p:nth-child(1) {
+  color: #141522;
+  font-size: 14px;
+}
+
+
+.user-name>p:nth-child(2) {
+  color: #54577A;
+  font-size: 12px;
+}
+
+@media screen and (max-width: 768px) {
+  .user-name>p:nth-child(1) {
+    color: #ffffff;
+  }
+  
+  .user-name>p:nth-child(2) {
+    color: #ffffff;
+  }
+  .settings-list{
+    p{
+      color: #ffffff!important; 
+      ;
+    }
+  }
+  li{
+    a{
+      color: #ffffff!important; 
+    }
+  }
+}
+
+
+.list-group-item {
+  border: inherit;
+
+}
+
+img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  margin: auto;
+}
+
+ul{
+    img{
+      width: 20px;
+      height: 20px;
+      margin-inline-start: 0px;
+    }
+}
+
+.settings-list{
+  gap: 2em;
+  p{
+    margin-top: 0.5em;
+    font-size: 12px;
+    color: #324054;
+    ;
+  }
+}
+
+.circle1{
+  margin-inline-start: 0.2em;
+}
+.circle2{
+  margin-inline-start: 0.7em;
+}
+
+li{
+  a{
+    text-decoration: none;
+    color: #141522;
+    font-size: 14px;
+  }
+}

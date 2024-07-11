@@ -1,0 +1,27 @@
+.dashboard-content {
+  display: flex;
+}
+
+.left-section {
+  width: 15%;
+  background: #ffffff;
+
+}
+
+@media screen and (max-width: 1200px) {
+  .left-section {
+    display: none;
+  }
+}
+
+.right-sidebar {
+  width: 20%;
+  background: #F5F5F7;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+  background-color: #f0f0f0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
