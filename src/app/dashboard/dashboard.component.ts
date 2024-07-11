@@ -90,6 +90,28 @@ export class DashboardComponent {
       `In Progress ${this.chartDataValues[3]}`,
       `Completed ${this.chartDataValues[4]}`
     ];
+
+    const centerTextPlugin = {
+      id: 'centerText',
+      beforeDraw: (chart: Chart<'doughnut'>) => {
+        const ctx = chart.ctx;
+        const width = chart.width;
+        const height = chart.height;
+        const fontSize = (height / 160).toFixed(1);
+        ctx.restore();
+        ctx.font = fontSize + "em sans-serif";
+        ctx.fillStyle = '#212633'; 
+        ctx.textBaseline = "middle";
+  
+        const text = `${sum}`;
+        const textX = Math.round((width - ctx.measureText(text).width) / 4.5);
+        const textY = height / 1.8;
+  
+        ctx.fillText(text, textX, textY);
+        ctx.save();
+      }
+    };
+  
   
     this.chart = new Chart("MyChart", {
       type: 'doughnut',
@@ -128,13 +150,14 @@ export class DashboardComponent {
           
           title: {
             display: true,
-            text: `Total: ${sum}`, // Display total sum in chart title
+            text: `Total: ${sum}`,
             font: { size: 14 },
             padding: 10,
           },
         },
         
       },
+      plugins: [centerTextPlugin] 
     });
   }
   

@@ -61,6 +61,7 @@
 
 .chart-padding {
     padding: 0 0 1em 1em;
+    border-radius: 24px;
 }
 
 .legend-container {
@@ -112,6 +113,7 @@
 
 .chart-container {
     margin-top: 2em;
+    border-radius: 24px;
 }
 
 .heading {
@@ -168,7 +170,7 @@
     font-weight: 500;
 }
 
-.col-md-5 > div:nth-child(2), .col-md-7 > div:nth-child(2), .col-md-6 > div:nth-child(2) {
+.col-md-5 > div:nth-child(2) {
     background-color: white;
     border-radius: 24px; /* Same border-radius for all columns */
   }
@@ -202,6 +204,5 @@
 
 }
 .last-chart{
-    border-radius: 24px;
     margin-top: 4.5em !important;
 }
