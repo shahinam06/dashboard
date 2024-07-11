@@ -114,7 +114,19 @@
 .chart-container {
     margin-top: 2em;
     border-radius: 24px;
+    cursor: pointer;
+    height: 60vh;
+    overflow: hidden;
 }
+
+.doughnut-chart-container{
+    height: 52vh;
+}
+
+#MyChart, #LineChart1, #LineChart2 {
+    height: 100%;
+  }
+
 
 .heading {
     display: flex;
@@ -141,7 +153,20 @@
     scrollbar-width: thin;
     scrollbar-color: #7575a4 #F5F5F7;
 }
-
+.list-group::part(scrollbar) {
+    border-radius: 10px;
+  }
+  
+  .list-group::part(scrollbar-thumb) {
+    border-radius: 10px;
+    background-color: #7575a4;
+  }
+  
+  .list-group::part(scrollbar-track) {
+    border-radius: 10px;
+    background-color: #F5F5F7;
+  }
+   
 .user-names {
     cursor: pointer;
     padding-bottom: 0;
@@ -205,4 +230,8 @@
 }
 .last-chart{
     margin-top: 4.5em !important;
+}
+
+.user-lists{
+    border-radius: 24px
 }

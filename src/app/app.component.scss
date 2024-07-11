@@ -18,6 +18,11 @@
   width: 20%;
   background: #F5F5F7;
 }
+@media screen and (max-width: 1024px) {
+  .right-sidebar {
+    width: auto!important;
+  }
+}
 
 .main-content {
   flex: 1;

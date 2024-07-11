@@ -65,9 +65,8 @@ export class DashboardComponent {
   }
   toggleSort() {
     this.sortDirection = -this.sortDirection; // Toggle between 1 and -1
-    this.sortIcon = this.sortDirection === 1 ? '↑' : '↓'; // Change icon based on direction
+    this.sortIcon = this.sortDirection === 1 ? '↑' : '↓'; 
 
-    // Sort items based on name and direction
     this.sortedItems.sort((a, b) => {
       const nameA = a.name.toUpperCase();
       const nameB = b.name.toUpperCase();
@@ -84,11 +83,11 @@ export class DashboardComponent {
     // Calculate the sum of chart data values
     const sum = this.chartDataValues.reduce((acc, value) => acc + value, 0);
     const labelsWithValues = [
-      `Not Started ${this.chartDataValues[0]}`,
-      `On Hold ${this.chartDataValues[1]}`,
-      `Submitted ${this.chartDataValues[2]}`,
-      `In Progress ${this.chartDataValues[3]}`,
-      `Completed ${this.chartDataValues[4]}`
+      `${this.chartDataValues[0]} Not Started`,
+      `${this.chartDataValues[1]} On Hold`,
+      `${this.chartDataValues[2]} Submitted`,
+      `${this.chartDataValues[3]} In Progress`,
+      `${this.chartDataValues[4]} Completed`
     ];
 
     const centerTextPlugin = {
@@ -104,15 +103,15 @@ export class DashboardComponent {
         ctx.textBaseline = "middle";
   
         const text = `${sum}`;
-        const textX = Math.round((width - ctx.measureText(text).width) / 4.5);
-        const textY = height / 1.8;
+        const textX = Math.round((width - ctx.measureText(text).width) / 4.2);
+        const textY = height / 1.75;
   
         ctx.fillText(text, textX, textY);
         ctx.save();
       }
     };
-  
-  
+
+
     this.chart = new Chart("MyChart", {
       type: 'doughnut',
       data: {
@@ -157,6 +156,7 @@ export class DashboardComponent {
         },
         
       },
+      
       plugins: [centerTextPlugin] 
     });
   }
@@ -175,8 +175,8 @@ export class DashboardComponent {
             data: [null, 0, 100, 200, 300, 380],
             borderColor: '#A700FF',
             backgroundColor: '#A700FF',
-            tension: 0.4,// Adjust tension for curved lines (0 is straight lines, 1 is very curved)
-            pointRadius: 0 // Remove points
+            tension: 0.2,// Adjust tension for curved lines (0 is straight lines, 1 is very curved)
+            pointRadius: 0, // Remove points
           },
           {
             label: "Mahami",
@@ -184,21 +184,71 @@ export class DashboardComponent {
             borderColor: '#EF4444',
             backgroundColor: '#EF4444',
             tension: 0.4,
-            pointRadius: 0 // Remove points
+            pointRadius: 0,
           },
           {
             label: "Dubai Court",
             data: [null, null, null, null, null,  0, 90, 180, 280, 330, 380],
             borderColor: '#3CD856',
             backgroundColor: '#3CD856',
-            tension: 0.4,
-            pointRadius: 0 // Remove points
+            tension: 0.2,
+            pointRadius: 0,
           }
         ]
       },
       options: {
+         // @ts-ignore
+         annotations: [
+          {
+            type: 'line',
+            mode: 'vertical',
+            scaleID: 'x',
+            value: 'Dec', // Last data point of first dataset
+            borderColor: 'rgba(0, 0, 0, 0.2)',
+            borderDash: [5, 5],
+            label: {
+              content: 'Last data point',
+              enabled: false
+            }
+          },
+          {
+            type: 'line',
+            mode: 'vertical',
+            scaleID: 'x',
+            value: 'Aug', // Last data point of second dataset
+            borderColor: 'rgba(0, 0, 0, 0.2)',
+            borderDash: [5, 5],
+            label: {
+              content: 'Last data point',
+              enabled: false
+            }
+          },
+          {
+            type: 'line',
+            mode: 'vertical',
+            scaleID: 'x',
+            value: 'Nov', // Last data point of third dataset
+            borderColor: 'rgba(0, 0, 0, 0.2)',
+            borderDash: [5, 5],
+            label: {
+              content: 'Last data point',
+              enabled: false
+            }
+          }
+        ],
         aspectRatio: 1,
+        layout: {
+          padding: {
+            top: 20, 
+            bottom: 20, 
+            left: 20, 
+            right: 20 
+          }
+        },
         plugins: {
+         
+         
+          
           legend: {
             display: true,
             position: 'bottom',
@@ -216,8 +266,9 @@ export class DashboardComponent {
               weight: 'bolder'
             },
             color: '#05004E', 
-          
+            align: 'start',
           },
+          
         },
         scales: {
           x: {
@@ -229,7 +280,7 @@ export class DashboardComponent {
           y: {
             display: true,
             grid: {
-              display: true // Hide y axis gridlines
+              display: true 
             },
             beginAtZero: true,
             min: 0,
@@ -238,7 +289,8 @@ export class DashboardComponent {
               stepSize: 100
             }
           }
-        }
+        },
+        
       }
     });
   }
@@ -247,7 +299,7 @@ export class DashboardComponent {
 
   createLineChart2() {
     this.lineChart2 = new Chart("LineChart2", {
-      type: 'line', // Type of chart
+      type: 'line', 
   
       data: {
         labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'July', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
@@ -257,8 +309,8 @@ export class DashboardComponent {
             data: [310, 300, 220, 140, 130, 180, 300, 310, 240, 180, 140, 120],
             borderColor: '#A700FF',
             backgroundColor: '#A700FF',
-            tension: 0.4,// Adjust tension for curved lines (0 is straight lines, 1 is very curved)
-            pointRadius: 0 // Remove points
+            tension: 0.4,
+            pointRadius: 0 
           },
           {
             label: "Mahami",
@@ -266,7 +318,7 @@ export class DashboardComponent {
             borderColor: '#EF4444',
             backgroundColor: '#EF4444',
             tension: 0.4,
-            pointRadius: 0 // Remove points
+            pointRadius: 0 
           },
           {
             label: "Dubai Court",
@@ -274,12 +326,21 @@ export class DashboardComponent {
             borderColor: '#3CD856',
             backgroundColor: '#3CD856',
             tension: 0.4,
-            pointRadius: 0 // Remove points
+            pointRadius: 0 
           }
         ]
       },
       options: {
         aspectRatio: 1,
+        
+        layout: {
+          padding: {
+            top: 20, 
+            bottom: 20, 
+            left: 20, 
+            right: 20 
+          }
+        },
         plugins: {
           legend: {
             display: true,
@@ -298,6 +359,7 @@ export class DashboardComponent {
               weight: 'bold' 
             },
             color: '#05004E', 
+            align: 'start',
           
           },
         },
@@ -305,13 +367,13 @@ export class DashboardComponent {
           x: {
             display: true,
             grid: {
-              display: false // Hide x axis gridlines
+              display: false 
             }
           },
           y: {
             display: true,
             grid: {
-              display: true // Hide y axis gridlines
+              display: true,
             },
             beginAtZero: true,
             min: 0,

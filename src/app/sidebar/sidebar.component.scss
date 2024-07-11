@@ -53,13 +53,13 @@
   color: #ffffff;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .sidebar .close-btn {
     display: block; /* Show close button below 768px */
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1025px) {
   .sidebar {
     width: 100%;
     height: 100%;
@@ -86,7 +86,7 @@
   
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1025px) {
   .hamburger {
   display: none;
   }
@@ -105,7 +105,7 @@
   font-size: 12px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .user-name>p:nth-child(1) {
     color: #ffffff;
   }
@@ -139,6 +139,14 @@ img {
   margin: auto;
   cursor: pointer;
 }
+
+@media screen and (max-width: 1024px) {
+  img{
+    margin: 0%;
+  }
+
+}
+
 
 ul{
     img{

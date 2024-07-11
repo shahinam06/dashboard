@@ -38,7 +38,7 @@
                 </div>
                
                 <div class="bg-white chart-padding">
-                    <div class="chart-container">
+                    <div class="chart-container doughnut-chart-container">
                         <canvas id="MyChart">{{ chart }}</canvas>
                     </div>
                     <div class="legend-container">
@@ -59,8 +59,8 @@
                     <p>Task Assigned</p>
                     <button><a>View More</a></button>
                 </div>
-                <div class="bg-white mt">
-                    <ul class="list-group">
+                <div class="mt">
+                    <ul class="list-group user-lists">
                         <li class="list-group-item text-start users-heading">Users <span (click)="toggleSort()"
                                 style="cursor: pointer;">{{ sortIcon }}</span></li>
                         <li class="list-group-item text-start user-names" *ngFor="let item of sortedItems">
