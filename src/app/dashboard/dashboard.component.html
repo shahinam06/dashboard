@@ -20,7 +20,7 @@
         </div>
         <div class="stats-count">
             <div class="icon">
-                <img src="../../assets//leads_icon.png" alt="">
+                <img src="../../assets/project_icon.png" alt="">
             </div>
             <div class="count">
                 <p>Teams</p>
@@ -31,7 +31,12 @@
 
     <div class="container text-center">
         <div class="row">
-            <div class="col-md-5">
+            <div class="col-lg-5">
+                <div class="sub-headings">
+                    <p>Tasks</p>
+                    <button><a>View More</a></button>
+                </div>
+               
                 <div class="bg-white chart-padding">
                     <div class="chart-container pie-chart">
                         <canvas id="MyChart">{{ chart }}</canvas>
@@ -49,8 +54,12 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-7 mt">
-                <div class="bg-white">
+            <div class="col-lg-7">
+                <div class="sub-headings">
+                    <p>Task Assigned</p>
+                    <button><a>View More</a></button>
+                </div>
+                <div class="bg-white mt">
                     <ul class="list-group">
                         <li class="list-group-item text-start users-heading">Users <span (click)="toggleSort()"
                                 style="cursor: pointer;">{{ sortIcon }}</span></li>
@@ -73,13 +82,17 @@
 
 
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-lg-6">
+                <div class="sub-headings">
+                    <p>Projects</p>
+                    <button><a>View More</a></button>
+                </div>
                 <div class="chart-container bg-white">
                     <canvas id="LineChart1">{{ lineChart1 }}</canvas>
                 </div>
             </div>
-            <div class="col-md-6">
-                <div class="chart-container bg-white">
+            <div class="col-lg-6">
+                <div class="chart-container bg-white last-chart">
                     <canvas id="LineChart2">{{ lineChart2 }}</canvas>
                 </div>
             </div>
