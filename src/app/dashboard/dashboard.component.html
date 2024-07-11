@@ -1,32 +1,16 @@
 <div>
     <div class="stats">
-        <div class="stats-count">
-            <div class="icon">
-                <img src="../../assets/project_icon.png" alt="">
+        <div *ngFor="let value of values">
+            <div class="stats-count">
+              <div class="icon">
+                <img src="../../assets/{{value.icon}}" alt="">
+              </div>
+              <div class="count">
+                <p>{{ value.label }}</p>
+                <p class="value">{{ value.value }}</p>
+              </div>
             </div>
-            <div class="count">
-                <p>Projects</p>
-                <p class="value">12</p>
-            </div>
-        </div>
-        <div class="stats-count">
-            <div class="icon">
-                <img src="../../assets/project_icon.png" alt="">
-            </div>
-            <div class="count">
-                <p>Leads</p>
-                <p class="value">12</p>
-            </div>
-        </div>
-        <div class="stats-count">
-            <div class="icon">
-                <img src="../../assets/project_icon.png" alt="">
-            </div>
-            <div class="count">
-                <p>Teams</p>
-                <p class="value">12</p>
-            </div>
-        </div>
+          </div>
     </div>
 
     <div class="container text-center">
@@ -36,7 +20,7 @@
                     <p>Tasks</p>
                     <button><a>View More</a></button>
                 </div>
-               
+
                 <div class="bg-white chart-padding">
                     <div class="chart-container doughnut-chart-container">
                         <canvas id="MyChart">{{ chart }}</canvas>
@@ -77,9 +61,7 @@
                     </ul>
                 </div>
             </div>
-
         </div>
-
 
         <div class="row">
             <div class="col-lg-6">

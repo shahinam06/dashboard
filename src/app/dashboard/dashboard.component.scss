@@ -6,8 +6,6 @@
 
 }
 
-
-
 .stats-count {
     width: 175px;
     height: 80px;
@@ -17,14 +15,29 @@
     gap: 14px;
     cursor: pointer;
     padding: 15px;
-    &:hover{
+
+    &:hover {
         background: #7575a4;
     }
 }
 
 .icon {
+    width: 50px;
+    height: 50px;
+    background: #F4F7FE;
+    border-radius: 50%;
+
+    &:hover {
+        background: #1B2559;
+    }
+
     img {
-        width: 50px;
+        width: 30px;
+        height: 40px;
+        position: relative;
+        top: 0.35em;
+        inset-inline-start: 0.6em;
+
     }
 }
 
@@ -46,19 +59,6 @@
     margin-top: -0.5em;
 }
 
-.task-section {
-    display: flex;
-}
-
-.tasks {
-    background: #ffffff;
-    height: 2em;
-}
-
-.charts-section {
-    display: flex;
-}
-
 .chart-padding {
     padding: 0 0 1em 1em;
     border-radius: 24px;
@@ -70,11 +70,9 @@
 }
 
 .legend-item {
-
     align-items: center;
 
     p {
-        // margin-inline-start: 1em;
         font-size: 12px;
         font-weight: bold;
         margin-bottom: 0em;
@@ -86,28 +84,12 @@
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    /* Creates circular shape */
-    margin-right: 10px;
+    margin-inline-end: 10px;
 }
 
 .legend-label {
     font-size: 10px;
     color: #000000;
-}
-
-
-.main-section {
-    display: flex;
-    margin-top: 2em;
-    gap: 2em;
-}
-
-.box {
-    // width: 212px;
-    height: auto;
-    background: #ffffff;
-    border-radius: 20px;
-    cursor: pointer;
 }
 
 
@@ -117,31 +99,18 @@
     cursor: pointer;
     height: 60vh;
     overflow: hidden;
+    position: relative;
 }
 
-.doughnut-chart-container{
+.doughnut-chart-container {
     height: 52vh;
 }
 
-#MyChart, #LineChart1, #LineChart2 {
+#MyChart,
+#LineChart1,
+#LineChart2 {
     height: 100%;
-  }
-
-
-.heading {
-    display: flex;
 }
-
-.heading {
-    button {
-        cursor: pointer;
-        padding: 1em;
-    }
-}
-
-
-
-
 
 .mt {
     margin-top: 2em;
@@ -153,20 +122,8 @@
     scrollbar-width: thin;
     scrollbar-color: #7575a4 #F5F5F7;
 }
-.list-group::part(scrollbar) {
-    border-radius: 10px;
-  }
-  
-  .list-group::part(scrollbar-thumb) {
-    border-radius: 10px;
-    background-color: #7575a4;
-  }
-  
-  .list-group::part(scrollbar-track) {
-    border-radius: 10px;
-    background-color: #F5F5F7;
-  }
-   
+
+
 .user-names {
     cursor: pointer;
     padding-bottom: 0;
@@ -195,43 +152,48 @@
     font-weight: 500;
 }
 
-.col-md-5 > div:nth-child(2) {
+.col-md-5>div:nth-child(2) {
     background-color: white;
-    border-radius: 24px; /* Same border-radius for all columns */
-  }
+    border-radius: 24px;
+}
 
-.sub-headings{
+.sub-headings {
     display: flex;
     gap: 1em;
     margin-bottom: -1em;
     margin-top: 1.5em;
-    p{
+
+    p {
         font-size: 15px;
         font-weight: bold;
-        color:#141522;
+        color: #141522;
     }
 
-    button{
+    button {
         border: 1px solid #C3D3E2;
         border-radius: 10px;
-        a{
-            color:#0F3659;
+
+        a {
+            color: #0F3659;
             text-decoration: none;
             font-size: 12px;
         }
+
         a:hover {
             color: #C3D3E2;
         }
     }
-    button:hover{
+
+    button:hover {
         background: #7575a4;
     }
 
 }
-.last-chart{
+
+.last-chart {
     margin-top: 4.5em !important;
 }
 
-.user-lists{
+.user-lists {
     border-radius: 24px
 }
