@@ -1,6 +1,6 @@
 .sidebar {
   color: #fff;
-  width: 20%;
+  width: 18%;
   height: 100vh;
   position: fixed;
   top: 0;
@@ -14,12 +14,12 @@
 
 .sidebar>p:nth-child(1) {
   color: #000000;
-  font-size: 12px;
+  font-size: 10px;
 }
 
 .sidebar>p:nth-child(2) {
   color: rgb(125, 125, 188);
-  font-size: 11px;
+  font-size: 9px;
 }
 
 .sidebar ul {
@@ -49,24 +49,23 @@
   inset-inline-end: 10px;
   background: none;
   border: none;
-  font-size: 24px;
+  font-size: 22px;
   cursor: pointer;
   color: #ffffff;
 }
 
 
-
-
-
 .user-name>p:nth-child(1) {
   color: #141522;
-  font-size: 14px;
+  font-size: 12px;
+  font-weight: bold;
 }
 
 
 .user-name>p:nth-child(2) {
   color: #54577A;
-  font-size: 12px;
+  font-size: 10px;
+  margin-top: -1em;
 }
 
 
@@ -98,32 +97,33 @@ ul {
 
   p {
     margin-top: 0.5em;
-    font-size: 12px;
+    font-size: 10px;
     color: #324054;
-    ;
+    margin-inline-start: -2em;
   }
 }
 
 .rounded-pill {
   background: #FF472E !important;
-  font-size: 11px;
+  font-size: 9px;
   font-weight: 400;
   cursor: pointer;
+  margin-inline-start: 2.1em;
 }
 
 .circle1 {
-  margin-inline-start: 0.2em;
+  margin-inline-start: 2.3em;
 }
 
 .circle2 {
-  margin-inline-start: 0.7em;
+  margin-inline-start: 2.8em;
 }
 
 li {
   a {
     text-decoration: none;
     color: #141522;
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 
@@ -150,7 +150,7 @@ li {
     position: fixed;
     inset-inline-end: 7px;
     z-index: 9999;
-    font-size: 20px;
+    font-size: 18px;
     background-color: #333;
     color: #fff;
     border: none;

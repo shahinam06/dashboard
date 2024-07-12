@@ -43,18 +43,18 @@
 
 .count>p:nth-child(1) {
     color: #A3AED0;
-    font-size: 12px;
+    font-size: 10px;
 }
 
 .count>p:nth-child(2) {
     color: #1B2559;
     ;
-    font-size: 11px;
+    font-size: 9px;
 }
 
 .value {
     font-weight: bold;
-    font-size: 15px !important;
+    font-size: 13px !important;
     color: #000000 !important;
     margin-top: -0.5em;
 }
@@ -73,7 +73,7 @@
     align-items: center;
 
     p {
-        font-size: 12px;
+        font-size: 10px;
         font-weight: bold;
         margin-bottom: 0em;
     }
@@ -88,7 +88,7 @@
 }
 
 .legend-label {
-    font-size: 10px;
+    font-size: 8px;
     color: #000000;
 }
 
@@ -103,7 +103,7 @@
 }
 
 .doughnut-chart-container {
-    height: 52vh;
+    height: 50vh;
 }
 
 #MyChart,
@@ -118,7 +118,7 @@
 
 .list-group {
     overflow-y: scroll;
-    height: 22.3em;
+    height: 21.3em;
     scrollbar-width: thin;
     scrollbar-color: #7575a4 #F5F5F7;
 }
@@ -136,19 +136,20 @@
 
 .user-details>p:nth-child(1) {
     color: #1B2128;
-    font-size: 12px;
-    font-weight: 500
+    font-size: 10px;
+    font-weight: 500;
+    margin-bottom: -1.2em;
 }
 
 .user-details>p:nth-child(2) {
     color: #959595;
-    font-size: 11px;
+    font-size: 9px;
     margin-top: -1em;
 }
 
 .users-heading {
     color: #534D59;
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 500;
 }
 
@@ -164,7 +165,7 @@
     margin-top: 1.5em;
 
     p {
-        font-size: 15px;
+        font-size: 13px;
         font-weight: bold;
         color: #141522;
     }
@@ -176,7 +177,7 @@
         a {
             color: #0F3659;
             text-decoration: none;
-            font-size: 12px;
+            font-size: 10px;
         }
 
         a:hover {

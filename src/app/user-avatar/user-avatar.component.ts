@@ -15,7 +15,7 @@ import { Component, Input } from '@angular/core';
       display: flex;
       justify-content: center;
       align-items: center;
-      font-size: 13px;
+      font-size: 11px;
       color: #fff;
     }
   `]

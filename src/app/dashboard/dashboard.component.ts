@@ -102,7 +102,7 @@ export class DashboardComponent {
         const ctx = chart.ctx;
         const width = chart.width;
         const height = chart.height;
-        const fontSize = (height / 160).toFixed(1);
+        const fontSize = (height / 150).toFixed(1);
         ctx.restore();
         ctx.font = fontSize + "em sans-serif";
         ctx.fillStyle = '#212633';
@@ -136,7 +136,8 @@ export class DashboardComponent {
         }],
       },
       options: {
-        aspectRatio: 1,
+        // aspectRatio: 1,
+        cutout: '70%',
         plugins: {
           legend: {
             display: true,
@@ -147,7 +148,7 @@ export class DashboardComponent {
               usePointStyle: true,
               padding: 20,
               font: {
-                size: 12,
+                size: 10,
               },
               color: '#000000'
 
@@ -157,7 +158,7 @@ export class DashboardComponent {
           title: {
             display: true,
             text: `Total: ${sum}`,
-            font: { size: 14 },
+            font: { size: 12 },
             padding: 10,
           },
         },
@@ -254,7 +255,7 @@ export class DashboardComponent {
               boxWidth: 6,
               padding: 20,
               font: {
-                size: 10,
+                size: 8,
               },
               color: '#464E5F'
             },
@@ -263,7 +264,7 @@ export class DashboardComponent {
             display: true,
             text: `Completed Tasks`,
             font: {
-              size: 15,
+              size: 13,
               weight: 'bolder'
             },
             color: '#05004E',
@@ -360,7 +361,7 @@ export class DashboardComponent {
               boxWidth: 6,
               padding: 20,
               font: {
-                size: 10,
+                size: 8,
               },
               color: '#464E5F'
             },
@@ -369,7 +370,7 @@ export class DashboardComponent {
             display: true,
             text: `Completed Tasks`,
             font: {
-              size: 15,
+              size: 13,
               weight: 'bold'
             },
             color: '#05004E',
