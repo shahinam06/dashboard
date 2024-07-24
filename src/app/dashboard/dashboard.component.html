@@ -78,6 +78,88 @@
                     <canvas id="LineChart2">{{ lineChart2 }}</canvas>
                 </div>
             </div>
+
+            <!-- <div>
+                <div *ngFor="let item of countData; let i = index">
+                  <div class="progress">
+                    <div
+                      *ngFor="let key of ['count1', 'count2', 'count3', 'count4', 'count5']"
+                      class="progress-bar"
+                      [style.width.%]="item[key] / getTotal(item) * 100"
+                      [ngClass]="{
+                        'bg-success': key === 'count1',
+                        'bg-info': key === 'count2',
+                        'bg-warning': key === 'count3',
+                        'bg-danger': key === 'count4',
+                        'bg-primary': key === 'count5'
+                      }"
+                    ></div>
+                  </div>
+                  <p>Total: {{ getTotal(item) }}</p>
+                </div>
+              </div> -->
+              
+
+              <table mat-table [dataSource]="countData">
+                <!-- Define columns -->
+                <ng-container matColumnDef="index">
+                  <th mat-header-cell *matHeaderCellDef> Index </th>
+                  <td mat-cell *matCellDef="let element; let i = index"> {{ i + 1 }} </td>
+                </ng-container>
+              
+                <!-- Define columns for count1 to count5 -->
+                <ng-container matColumnDef="counts">
+                  <th mat-header-cell *matHeaderCellDef> Counts </th>
+                  <td mat-cell *matCellDef="let element">
+                    <app-progress-bars [data]="element"></app-progress-bars>
+                  </td>
+                </ng-container>
+              
+                <!-- Assign columns to the table rows -->
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+              </table>
+              
+              
+              
+              
+
+
+
+
+            
+            <div class="column-container">
+                <div class="column">
+                  <input type="radio" id="radio1" name="column1" >
+                  <label for="radio1">Option 1</label>
+                </div>
+                <div class="column">
+                  <input type="radio" id="radio2" name="column1" >
+                  <label for="radio2">Option 2</label>
+                </div>
+                <div class="column">
+                  <input type="radio" id="radio3" name="column1" >
+                  <label for="radio3">Option 3</label>
+                </div>
+              </div>
+              
+              <!-- <div class="progress-bar" [ngStyle]="{'background-color': getColor(progress.status)}">
+                <div class="progress" [ngStyle]="{'width': progress.value + '%'}"></div>
+              </div> -->
+
+            <div class="image-container">
+                <img src="../../assets/Avatars.png" alt="Image 1">
+                <img src="../../assets/Avatars.png" alt="Image 2">
+                <img src="../../assets/Avatars.png" alt="Image 3">
+                <div class="plus-sign">+</div>
+                <!-- Add more images as needed -->
+              </div>
+
+           
+
+  
+  
+              
         </div>
     </div>
 </div>

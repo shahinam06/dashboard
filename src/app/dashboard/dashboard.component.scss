@@ -43,20 +43,24 @@
 
 .count>p:nth-child(1) {
     color: #A3AED0;
-    font-size: 10px;
+    font-size: 14px;
+    font-family: Dubai-Regular;
+    letter-spacing: normal;
 }
 
 .count>p:nth-child(2) {
     color: #1B2559;
-    ;
     font-size: 9px;
 }
 
 .value {
-    font-weight: bold;
-    font-size: 13px !important;
+    font-size: 24px !important;
     color: #000000 !important;
     margin-top: -0.5em;
+    font-family: Dubai-Bold;
+    font-weight: 700;
+    letter-spacing: normal;
+
 }
 
 .chart-padding {
@@ -136,15 +140,18 @@
 
 .user-details>p:nth-child(1) {
     color: #1B2128;
-    font-size: 10px;
-    font-weight: 500;
+    font-size: 14px;
     margin-bottom: -1.2em;
+    font-family: Dubai-Medium;
+    letter-spacing: normal;
 }
 
 .user-details>p:nth-child(2) {
+    font-family: Dubai-Regular;
     color: #959595;
-    font-size: 9px;
-    margin-top: -1em;
+    font-size: 14px;
+    margin-top: 1em;
+    letter-spacing: normal;
 }
 
 .users-heading {
@@ -165,19 +172,24 @@
     margin-top: 1.5em;
 
     p {
-        font-size: 13px;
-        font-weight: bold;
+        font-size: 24px;
         color: #141522;
+        font-family: 'Dubai-Bold' !important;
+        letter-spacing: normal;
+
     }
 
     button {
         border: 1px solid #C3D3E2;
         border-radius: 10px;
+        font-family: 'Dubai-Medium';
 
         a {
             color: #0F3659;
             text-decoration: none;
-            font-size: 10px;
+            font-size: 14px;
+            letter-spacing: normal;
+            
         }
 
         a:hover {
@@ -198,3 +210,136 @@
 .user-lists {
     border-radius: 24px
 }
+
+
+@media screen and (max-width: 1550px) {
+
+    .count>p:nth-child(1) {
+        font-size: 12px;
+    }
+    
+    .value {
+        font-size: 22px !important;    
+    }
+    
+    .user-details>p:nth-child(1) {
+        font-size: 12px;
+    }
+    
+    .user-details>p:nth-child(2) {
+        font-size: 12px;
+    }
+    
+    .sub-headings {
+    
+        p {
+            font-size: 22px;
+        
+        }
+    
+        button {
+           
+            a {
+                font-size: 12px;
+                
+            }
+
+        }
+
+    }
+}
+
+.image-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+  }
+  .image-container img {
+    border: 1.5px solid white; /* Border style */
+    border-radius: 50%;
+    cursor: pointer;
+    width: 2em;
+    height: 2em;
+  }
+  .image-container img:not(:first-child) {
+    margin-left: -1em; /* Adjust overlap for subsequent images */
+  }
+
+  .plus-sign {
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    color: red;
+    font-size: 12px;
+    left: 3em;
+    font-weight: bold;
+    /* width: 10px; */
+    /* height: 10px; */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    cursor: pointer;
+    margin-top: 1.5em;
+  }
+
+
+  .column-container {
+    display: flex;
+    justify-content: center; /* Center align columns */
+  }
+  
+  .column {
+    text-align: center;
+    border: 1px solid #ccc;
+    padding: 10px; /* Adjust padding as needed */
+    cursor: pointer;
+  }
+  
+  .column:not(:last-child) {
+    margin-right: 0; /* Remove margin between columns */
+  }
+  
+  .column input[type="radio"] {
+    margin-right: 5px;
+    cursor: pointer;
+  }
+  
+
+  .progress {
+    height: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .progress-bar {
+    height: 100%;
+  }
+  
+  .bg-success {
+    background-color: #28a745 !important; /* Green */
+  }
+  
+  .bg-info {
+    background-color: #17a2b8 !important; /* Blue */
+  }
+  
+  .bg-warning {
+    background-color: #ffc107 !important; /* Yellow */
+  }
+  
+  .bg-danger {
+    background-color: #dc3545 !important; /* Red */
+  }
+  
+  .bg-primary {
+    background-color: #007bff !important; /* Primary Blue */
+  }
+  
+  
+  
+
+  
+  

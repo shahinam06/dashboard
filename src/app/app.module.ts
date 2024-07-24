@@ -1,3 +1,4 @@
+
 import { NgModule } from '@angular/core';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
 
@@ -9,6 +10,11 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { SectionComponent } from './section/section.component';
 import { UserAvatarComponent } from './user-avatar/user-avatar.component';
+import {MatTableModule} from '@angular/material/table';
+import { ProgressBarsComponent } from './progress-bars/progress-bars.component';
+import { ChartsComponent } from './charts/charts.component';
+import { isPlatformBrowser } from '@angular/common';
+// import { NgApexchartsModule } from 'ng-apexcharts';
 
 
 @NgModule({
@@ -17,12 +23,16 @@ import { UserAvatarComponent } from './user-avatar/user-avatar.component';
     DashboardComponent,
     SidebarComponent,
     SectionComponent,
-    UserAvatarComponent
+    UserAvatarComponent,
+    ProgressBarsComponent,
+    ChartsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    MatTableModule,
+    // NgApexchartsModule
   ],
   providers: [
     provideClientHydration(),

@@ -1,14 +1,31 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component, Input } from '@angular/core';
 import { Chart, ChartItem } from 'chart.js/auto';
-
+import { MatTableDataSource } from '@angular/material/table';
+// import 'chartjs-plugin-linear-progress';
 // Chart.register(ChartDataLabels);
-
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.scss'
 })
+
+
 export class DashboardComponent {
+
+
+
+  @Input() progress: any;
+
+  getColor(status: string) {
+    const colorMap: { [key: string]: string } = {
+      success: "green",
+      warning: "yellow",
+      error: "red"
+    };
+    return colorMap[status];
+  }
+
+ 
   public chart: any;
   public lineChart1: any;
   public lineChart2: any;
@@ -60,13 +77,26 @@ export class DashboardComponent {
 
 
   chartDataValues: number[] = [25, 30, 25, 20, 20];
+  displayedColumns: string[] = ['index', 'counts'];
+  countData = [
+    { count1: 0, count2: 0, count3: 0, count4: 0, count5: 0 },
+    { count1: 10, count2: 20, count3: 25, count4: 41, count5: 55 },
+    { count1: 90, count2: 20, count3: 25, count4: 30, count5: 35 },
+    { count1: 5, count2: 10, count3: 15, count4: 80, count5: 25 },
+    { count1: 8, count2: 12, count3: 27, count4: 20, count5: 24 },
+    // Only 5 objects as required
+  ];
 
-
+  dataSource = new MatTableDataSource<any>(this.countData);
 
   ngOnInit(): void {
     this.createChart();
     this.createLineChart1()
     this.createLineChart2();
+  }
+  getTotal(obj: any) {
+    // Calculate the sum of count1 to count5 for a specific object
+    return obj.count1 + obj.count2 + obj.count3 + obj.count4 + obj.count5;
   }
   toggleSort() {
     this.sortDirection = -this.sortDirection; // Toggle between 1 and -1
@@ -109,8 +139,8 @@ export class DashboardComponent {
         ctx.textBaseline = "middle";
 
         const text = `${sum}`;
-        const textX = Math.round((width - ctx.measureText(text).width) / 4.2);
-        const textY = height / 1.75;
+        const textX = Math.round((width - ctx.measureText(text).width) / 4.3);
+        const textY = height /2;
 
         ctx.fillText(text, textX, textY);
         ctx.save();
@@ -136,7 +166,7 @@ export class DashboardComponent {
         }],
       },
       options: {
-        // aspectRatio: 1,
+        aspectRatio: 1,
         cutout: '70%',
         plugins: {
           legend: {
@@ -148,17 +178,21 @@ export class DashboardComponent {
               usePointStyle: true,
               padding: 20,
               font: {
-                size: 10,
+                size: 12,
+                family: 'Dubai-Regular'
               },
-              color: '#000000'
+              color: '#000000',
 
             },
           },
 
           title: {
-            display: true,
-            text: `Total: ${sum}`,
-            font: { size: 12 },
+            // display: true,
+            // text: `Total: ${sum}`,
+            font: {
+               size: 20,
+               family: 'Dubai-Bold'
+             },
             padding: 10,
           },
         },
@@ -168,6 +202,8 @@ export class DashboardComponent {
       plugins: [centerTextPlugin]
     });
   }
+
+   
 
   addHighestPointDot(datasets: any[]) {
     datasets.forEach((dataset) => {
@@ -255,7 +291,8 @@ export class DashboardComponent {
               boxWidth: 6,
               padding: 20,
               font: {
-                size: 8,
+                size: 12,
+                family: 'Dubai-Regular'
               },
               color: '#464E5F'
             },
@@ -264,8 +301,9 @@ export class DashboardComponent {
             display: true,
             text: `Completed Tasks`,
             font: {
-              size: 13,
-              weight: 'bolder'
+              size: 20,
+              weight: 'bolder',
+              family: 'Dubai-Bold'
             },
             color: '#05004E',
             align: 'start',
@@ -361,7 +399,8 @@ export class DashboardComponent {
               boxWidth: 6,
               padding: 20,
               font: {
-                size: 8,
+                size: 12,
+                family: 'Dubai-Regular'
               },
               color: '#464E5F'
             },
@@ -370,8 +409,11 @@ export class DashboardComponent {
             display: true,
             text: `Completed Tasks`,
             font: {
-              size: 13,
-              weight: 'bold'
+              size: 20,
+              // weight: 'bold',
+              family: 'Dubai-Bold',
+
+
             },
             color: '#05004E',
             align: 'start',

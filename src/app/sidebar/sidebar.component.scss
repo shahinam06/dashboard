@@ -57,15 +57,19 @@
 
 .user-name>p:nth-child(1) {
   color: #141522;
-  font-size: 12px;
-  font-weight: bold;
+  font-size: 24px;
+  font-family: 'Dubai-Bold';
+  letter-spacing: normal;
 }
 
 
 .user-name>p:nth-child(2) {
   color: #54577A;
-  font-size: 10px;
+  font-size:1em;
   margin-top: -1em;
+  font-family: 'Dubai-Normal';
+  letter-spacing: normal;
+
 }
 
 
@@ -97,9 +101,11 @@ ul {
 
   p {
     margin-top: 0.5em;
-    font-size: 10px;
+    font-size: 16px;
     color: #324054;
-    margin-inline-start: -2em;
+    margin-inline-start: -1em;
+    font-family: 'Dubai-Medium';
+    letter-spacing: normal;
   }
 }
 
@@ -116,14 +122,16 @@ ul {
 }
 
 .circle2 {
-  margin-inline-start: 2.8em;
+  margin-inline-start: 3em;
 }
 
 li {
   a {
     text-decoration: none;
     color: #141522;
-    font-size: 12px;
+    font-size: 24px;
+    font-family: 'Dubai-Bold';
+    letter-spacing: normal;
   }
 }
 
@@ -187,4 +195,35 @@ li {
   .hamburger {
     display: none;
   }
+}
+
+
+@media screen and (max-width: 1550px) {
+  .user-name>p:nth-child(1) {
+    font-size: 22px;
+  }
+  
+  
+  .user-name>p:nth-child(2) {
+    font-size:14px;
+  
+  
+  }
+  
+  .settings-list {
+    gap: 2em;
+  
+    p {
+      font-size: 14px;
+  
+    }
+  }
+  
+  li {
+    a {
+   
+      font-size: 22px;
+    }
+  }
+
 }

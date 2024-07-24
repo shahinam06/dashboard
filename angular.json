@@ -45,7 +45,8 @@
               "src/styles.scss"
             ],
             "scripts": [
-              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
+              "node_modules/apexcharts/dist/apexcharts.min.js"
             ],
             "server": "src/main.server.ts",
             "prerender": true,
@@ -114,7 +115,8 @@
               "src/styles.scss"
             ],
             "scripts": [
-              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
+               "node_modules/apexcharts/dist/apexcharts.min.js"
             ]
           }
         }
